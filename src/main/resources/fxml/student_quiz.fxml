@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fx:id="scrollPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" fx:controller="edu.pja.kim.mas_final.controller.StudentQuizController">
+    <content>
+        <AnchorPane fx:id="mainPane">
+
+            <VBox spacing="10" layoutX="20.0" layoutY="20.0">
+                <Label text="Students:" />
+                <ListView fx:id="studentListView" prefHeight="360.0" prefWidth="280.0" style="-fx-background-color: #f0f0f0;" />
+                <Label text="Assigned quizzes:" />
+                <ListView fx:id="quizListView" prefHeight="360.0" prefWidth="280.0" style="-fx-background-color: #e0e0e0;" />
+
+            </VBox>
+
+            <VBox spacing="10" layoutX="320.0" layoutY="20.0">
+
+                <VBox spacing="5">
+                    <Label text="Select Student:" />
+                    <ChoiceBox fx:id="studentChoiceBox" prefWidth="280.0" />
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label text="Select Quiz:" />
+                    <ChoiceBox fx:id="quizChoiceBox" prefWidth="280.0" />
+                </VBox>
+
+                <Button text="Assign" onAction="#saveAssignment" />
+
+            </VBox>
+
+        </AnchorPane>
+    </content>
+</ScrollPane>
